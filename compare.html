@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Universities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar" aria-label="Main Navigation">
+      <div class="logo" style="font-size:2rem;font-weight:700;letter-spacing:1px;">🎓 UniChoices</div>
+      <nav>
+        <a href="index.html" aria-label="Home">Home</a>
+        <a href="universities.html" aria-label="Universities">Universities</a>
+        <a href="compare.html" class="active" aria-label="Compare">Compare</a>
+      </nav>
+      <button id="mode-toggle" aria-label="Toggle dark/light mode" style="margin-left:2rem;">🌙</button>
+    </header>
+
+
+    <section class="compare-section fade-transition" style="background:rgba(24,24,24,0.98);border-radius:32px;box-shadow:0 4px 32px rgba(0,0,0,0.18);margin-top:2rem;">
+      <h2 style="text-align:center;margin-bottom:1rem;">Compare Two Universities</h2>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem;">
+        <label style="color:#aaa;display:flex;flex-direction:column;align-items:flex-start;">
+          University A:
+          <select id="compare-a" style="margin-top:0.5rem;padding:0.5rem 0.75rem;border-radius:8px;background:#181818;color:#fff;border:1px solid #222;">
+            <option value="kennesaw">Kennesaw State University</option>
+            <option value="gsu">Georgia State University</option>
+            <option value="gatech">Georgia Tech</option>
+            <option value="utaustin">The University of Texas at Austin</option>
+            <option value="tamu">Texas A&amp;M University</option>
+            <option value="utdallas">University of Texas at Dallas</option>
+            <option value="uh">University of Houston</option>
+            <option value="ttu">Texas Tech University</option>
+            <option value="rice">Rice University</option>
+            <option value="stanford">Stanford University</option>
+            <option value="berkeley">UC Berkeley</option>
+            <option value="ucsd">UC San Diego</option>
+            <option value="usc">USC</option>
+            <option value="caltech">Caltech</option>
+            <option value="sjsu">San Jose State University</option>
+            <option value="csuf">CSU Fullerton</option>
+          </select>
+        </label>
+        <label style="color:#aaa;display:flex;flex-direction:column;align-items:flex-start;">
+          University B:
+          <select id="compare-b" style="margin-top:0.5rem;padding:0.5rem 0.75rem;border-radius:8px;background:#181818;color:#fff;border:1px solid #222;">
+            <option value="gsu">Georgia State University</option>
+            <option value="kennesaw">Kennesaw State University</option>
+            <option value="gatech">Georgia Tech</option>
+            <option value="utaustin">The University of Texas at Austin</option>
+            <option value="tamu">Texas A&amp;M University</option>
+            <option value="utdallas">University of Texas at Dallas</option>
+            <option value="uh">University of Houston</option>
+            <option value="ttu">Texas Tech University</option>
+            <option value="rice">Rice University</option>
+            <option value="stanford">Stanford University</option>
+            <option value="berkeley">UC Berkeley</option>
+            <option value="ucsd">UC San Diego</option>
+            <option value="usc">USC</option>
+            <option value="caltech">Caltech</option>
+            <option value="sjsu">San Jose State University</option>
+            <option value="csuf">CSU Fullerton</option>
+          </select>
+        </label>
+      </div>
+
+      <table class="compare-table" id="compare-table" aria-label="Side by side university comparison">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th id="col-a">University A</th>
+            <th id="col-b">University B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Location</td><td id="loc-a"></td><td id="loc-b"></td></tr>
+          <tr><td>Enrollment</td><td id="enr-a"></td><td id="enr-b"></td></tr>
+          <tr><td>In-state Tuition</td><td id="in-a"></td><td id="in-b"></td></tr>
+          <tr><td>Out-of-state Tuition</td><td id="out-a"></td><td id="out-b"></td></tr>
+          <tr><td>Acceptance Rate</td><td id="acc-a"></td><td id="acc-b"></td></tr>
+          <tr><td>Pros</td><td id="pros-a"></td><td id="pros-b"></td></tr>
+        </tbody>
+      </table>
+      <div class="compare-links" style="margin-top:2rem;">
+        <a href="kennesaw.html" class="btn">Kennesaw State Details</a>
+        <a href="gsu.html" class="btn">Georgia State Details</a>
+        <a href="gatech.html" class="btn">Georgia Tech Details</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 My University Choices</p>
+    </footer>
+    <script src="universities-data.js"></script>
+    <script src="compare.js"></script>
+    <script src="glass.js"></script>
+  </body>
+</html>
+
