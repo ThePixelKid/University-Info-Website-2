@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
       <h3>${u.name}</h3>
       <p class="muted">${(u.location||'').split(',')[0] || ''}</p>
       <p class="meta">Acceptance: <strong>${u.acceptance || 'N/A'}</strong></p>
+      <p class="meta">Tuition: <strong>In: ${u.in || '-'}</strong> · <small>Out: ${u.out || '-'}</small></p>
+      <p class="meta">Avg Starting Salary: <strong>${u.avgSalary || '-'}</strong></p>
       <p class="highlight">${(u.pros||'').slice(0,90)}${(u.pros && u.pros.length>90? '…':'')}</p>
+      ${Array.isArray(u.notablePrograms) ? `<p class="muted">Programs: ${u.notablePrograms.slice(0,3).join(', ')}${u.notablePrograms.length>3? '…':''}</p>` : ''}
       <a class="btn" href="${u.page || '#'}">View Details</a>
     `;
     grid.appendChild(card);
